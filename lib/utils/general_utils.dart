@@ -31,4 +31,9 @@ class GeneralUtils {
       reverseAnimationCurve: Curves.decelerate,
     )..show(context));
   }
+
+  static void fieldFocusChange(BuildContext context,FocusNode current,FocusNode nextFocus){
+    current.unfocus();
+    FocusScope.of(context).requestFocus(nextFocus);
+  }
 }
